@@ -26,9 +26,7 @@ def contains(polygonPoints, point):
     global width
 
     prev_point = syPoint(0, 0)
-    print(polygonPoints)
     check_line = sySegment(syPoint(point.x, point.y), syPoint(width, point.y))
-    print(check_line)
     counter = 0
 
     for i in range(len(polygonPoints)):
@@ -36,7 +34,6 @@ def contains(polygonPoints, point):
 
         if prev_point == syPoint(0, 0):
             prev_point = p
-            print("changed initial prev")
             continue
 
         side = sySegment(syPoint(prev_point.x, prev_point.y), p)
@@ -82,7 +79,6 @@ def contains(polygonPoints, point):
 
         prev_point = p
 
-    print(counter)
     if counter % 2 == 1:
         return True
     else:
