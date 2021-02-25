@@ -54,7 +54,7 @@ def contains(polygonPoints, point):
                                                                    polygonPoints[(i + 1) % len(polygonPoints)].y)))
 
                 if new_intersects1 and new_intersects2 or not new_intersects1 and not new_intersects2:
-                    return False
+                    continue
                 else:
                     counter += 1
 
@@ -77,7 +77,7 @@ def contains(polygonPoints, point):
                                        sySegment(syPoint(polygonPoints[0].x, polygonPoints[0].y),
                                                  syPoint(polygonPoints[1].x, polygonPoints[1].y)))
                     if new_intersects1 and new_intersects2 or not new_intersects1 and not new_intersects2:
-                        return False
+                        continue
                     else:
                         counter += 1
 
