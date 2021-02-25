@@ -43,6 +43,8 @@ def contains(polygonPoints, point):
             intersection_point = side.intersection(check_line)[0]
             if intersection_point != prev_point and intersection_point != p:
                 counter += 1
+            # elif intersection_point == prev_point and intersection_point == p:
+            #     continue
             elif intersection_point == p:
                 new_line = generate_line_turned(point, p)
                 new_intersects1 = does_intersect(new_line, side)
@@ -64,6 +66,8 @@ def contains(polygonPoints, point):
 
                 if intersection_point != prev_point and not equals_with_precision(intersection_point, polygonPoints[0]):
                     counter += 1
+                # elif intersection_point == prev_point and equals_with_precision(intersection_point, polygonPoints[0]):
+                #     continue
                 elif equals_with_precision(intersection_point, polygonPoints[0]):
                     new_line = generate_line_turned(point, intersection_point)
 
