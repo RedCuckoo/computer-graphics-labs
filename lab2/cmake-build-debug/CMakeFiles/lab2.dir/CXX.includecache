@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/projects/computer-graphics-labs/lab2/main.cpp
+iostream
+-
+GL/glut.h
+-
+vector
+-
+unordered_set
+-
+algorithm
+-
+stack
+-
+
